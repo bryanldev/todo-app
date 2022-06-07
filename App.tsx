@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Buffer } from 'buffer'
+import 'react-native-get-random-values'
+import { AppContainer } from '@/components'
+import { Routes } from '@/routes'
+import React from 'react'
+
+global.Buffer = global.Buffer || Buffer
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <AppContainer>
+      <Routes />
+    </AppContainer>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
